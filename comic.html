@@ -4,7 +4,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>深海 - Comics</title>
+  <title>未来のMir4 - Comics</title>
+  <link rel="icon" type="image/x-icon" href="fav/favicon.ico">
   <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/fuwaimg.css">
@@ -15,6 +16,18 @@
   <script src="js/rellax.js"></script>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Sawarabi+Mincho&display=swap" rel="stylesheet">
+  <meta property="og:url" content="https://mira-c4t.github.io" />
+  <meta property="og:site_name" content="みゃうさんページ" />
+  <meta
+      property="og:description"
+      content="ここはネットの海！暇つぶしに作成されたサイトでしかない！"
+  />
+  <meta
+      property="og:image"
+      content="https://mira-c4t.github.io/img/01.jpg"
+  />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="海深｜海の底にある暇つぶし" />
 </head>
 
 <body id="text">
@@ -43,10 +56,10 @@
 パララックスを使ってみたいと思ったガタガタは、<br>
 なんかよさげなHTMLテンプレートを作ってみたのだった……。</p>
 
-<img src="img/comic-01.jpg" class="comics">
-<img src="img/comic-01.jpg" class="comics">
-<img src="img/comic-02.jpg" class="comics tame">
-<img src="img/comic-03.jpg" class="comics">
+<img src="img/comics/01/comic-01.jpg" class="comics">
+<img src="img/comics/01/comic-01.jpg" class="comics">
+<img src="img/comics/01/comic-02.jpg" class="comics tame">
+<img src="img/comics/01/comic-03.jpg" class="comics">
 
 <div class="page">
   <a href="#" class="next">< next</a>
@@ -117,23 +130,60 @@
     <div class="container">
       <div class="row">
         <div class="col-12 center">
-          <a href="index.html"><span class="sitename">ここにサイト名</span></a>
-          <p>since 2020.</p>
+          <a href="index.html"><span class="sitename">Mira-c4t</span></a>
+          <p>since 2026.</p>
 
-          <p>注意書き、SNSボタンなどをここにおいてもOK。</p>
+          <p>ただの暇つぶしで作ったサイトです。</p>
 
           <ul class="sns-list">
-            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-            <li><a href="#"><i class="fab fa-tumblr"></i></a></li>
-            <li><a href="#"><i class="fas fa-envelope"></i></a></li>
+              <li>
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+              </li>
+              <li>
+                  <a href="https://github.com/Mira-c4t"
+                      ><i class="fab fa-github"></i
+                  ></a>
+              </li>
           </ul>
 
-          <p class="bottom"><a href="https://do.gt-gt.org" target="_blank">template by do.</a></p>
+          <!-- 消しちゃだめ！！ -->
+          <p class="bottom">
+              <a href="https://do.gt-gt.org" target="_blank"
+                  >template by do.</a
+              >
+          </p>
         </div>
       </div>
     </div>
   </footer>
+
+  <svg
+      xmlns="http://www.w3.org/2000/svg"
+      version="1.1"
+      width="800"
+      style="display: none"
+  >
+      <defs>
+          <filter id="goo">
+              <feGaussianBlur
+                  in="SourceGraphic"
+                  stdDeviation="6"
+                  result="blur"
+              />
+              <feColorMatrix
+                  in="blur"
+                  mode="matrix"
+                  values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 35 -15"
+                  result="goo"
+              />
+              <feComposite in="SourceGraphic" in2="goo" operator="atop" />
+          </filter>
+      </defs>
+  </svg>
+
+  <div class="only-pc">
+      <div id="cursor" class="Cursor"></div>
+  </div>
 
   <script>
     var rellax = new Rellax(' .rellax ', {
@@ -143,6 +193,9 @@
   </script>
   <script src="js/scrollbooster.min.js" charset="utf-8"></script>
 <script src="js/fuwaimg.js" charset="utf-8"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.1/TweenMax.min.js"></script>
+<script src="js/custom-cursor.js"></script>
+<script src="js/fixmenu_pagetop.js"></script>
 </body>
 
 </html>
