@@ -8,6 +8,68 @@
   リセットCSS
   基本的には触らないでください
   ========================================== */
+
+
+/* マウスカーソル設定
+---------------------------------------------------------------------------*/
+/* 1. 元々のマウスカーソルを非表示にし、独自の動きに備える
+body, html {
+  cursor: none;
+}
+*/
+
+/* カスタムカーソルの配置とフィルター適用 */
+.Cursor {
+  pointer-events: none; /* カーソル自体がクリックを邪魔しないようにする設定 */
+  position: fixed;
+  display: block;
+  border-radius: 0;
+  transform-origin: center center;
+  mix-blend-mode: difference; /* 背景色と反転して見やすくなる効果 */
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  filter: url("#goo"); /* HTMLに書いたSVGフィルターを適用 */
+}
+
+/* カーソルを構成する無数のドット（spanタグ）の形 */
+.Cursor span {
+  position: absolute;
+  display: block;
+  width: 26px;
+  height: 26px;
+  border-radius: 20px;
+  background-color: #fff;
+  transform-origin: center center;
+  transform: translate(-50%, -50%);
+}
+/*PAGE TOP（↑）設定
+---------------------------------------------------------------------------*/
+body .nav-fix-pos-pagetop a {
+	display: none;
+}
+body.is-fixed-pagetop .nav-fix-pos-pagetop a {
+	display: block;text-decoration: none;text-align: center;position: fixed;animation-name: opa1;animation-duration: 1s;animation-fill-mode: forwards;
+	width: 80px;		/*ボタンの幅*/
+    height: 80px;        /* ボタンの高さ*/
+	line-height: 80px;	/*ボタンの上下中央揃え*/
+	bottom: 50px;		/*画面の下からの配置場所指定*/
+	right: 3%;			/*画面の右からの配置場所指定*/
+	background: rgba(255,255,255,0.5);	/*背景色*/
+	border: 1px dashed #ccc;			/*枠線の幅、線種、色*/
+	border-radius: 50%;	/*円形にする指定。この１行を削除すると正方形になります。*/
+    z-index: 9000;
+}
+/*マウスオン時*/
+body.is-fixed-pagetop .nav-fix-pos-pagetop a:hover {
+	background: #fff;	/*背景色*/
+	border: 1px dashed #c3dff4;			/*枠線の幅、線種、色*/
+}
+
+
+/* 以下テンプレート
+---------------------------------------------------------------------------*/
+
 ol,
 ul {
   list-style: none;
@@ -35,11 +97,11 @@ input {
   変えないほうが無難ですが、編集するときは漏れのないよう気を付けてください
    ========================================== */
 body {
-  background: #313536;
+  background: #c4dbe0;
   font-family: YuGothic,'Yu Gothic','TsukuBRdGothic-Regular','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3','Cambria Math','Avenir',sans-serif;
   padding: 0;
   margin: 0;
-  color: #c0cccf;
+  color: #7a8588;
 }
 
 body#text {
@@ -79,7 +141,7 @@ dl dt {
 
 a {
   text-decoration: none;
-  color: snow;
+  color: black;
   -webkit-transition: 0.7s;
   transition: 0.7s;
 }
@@ -183,7 +245,7 @@ h3 {
   font-size: 130%;
   display: block;
   margin: 20px auto;
-  color: snow;
+  color: black;
 }
 
 @media screen and (max-width: 767px) {
@@ -219,7 +281,7 @@ header ul {
 header ul li a {
   display: block;
   padding: 20px;
-  color: #c0cccf;
+  color: snow;
   text-shadow: 0 1px 10px #313536;
 }
 
@@ -255,7 +317,7 @@ section#top {
 }
 
 section#first {
-  background: #313536;
+  background: #c4dbe0;
   overflow: visible;
 }
 

@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>深海</title>
+  <title>未来のMir4</title>
   <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/fuwaimg.css">
@@ -44,15 +44,15 @@
     </div>
     <div class="rellax back" data-rellax-speed="4">
       <div class="center full">
-        <img src="img/top.png">
+        <img src="img/top.png" alt="">
       </div>
     </div>
     <div class="rellax deep fix-80 only-pc" data-rellax-speed="-2">
       <div class="right half">
-        <img src="img/fish.png">
+        <img src="img/fish.png" alt="">
       </div>
       <div class="left half">
-        <img src="img/fish.png">
+        <img src="img/fish.png" alt="">
       </div>
     </div>
   </section>
@@ -92,27 +92,27 @@
       <div class="row">
 
         <div class="col-md-6">
-          <img src="img/top.png" alt="top.png">
+          <img src="img/top.png" alt="">
         </div>
 
         <div class="col-md-6">
           <h3>Mira-C4t</h3>
-          <p>a.k.a Mira<br>
-              a.k.a Argent<br>
+          <p>a.k.a Mira, Argent<br>
             <!--<a href="#">→Pixiv</a> --> </p>
 
           <dl class="flex">
-            <dt>2020.2.1</dt>
-            <dd>イラスト一点</dd>
 
-            <dt>2020.1.8</dt>
-            <dd>イベントに参加しました</dd>
+              <dt>2020.1.8</dt>
+              <dd>イベントに参加しました</dd>
 
-            <dt>2019.12.20</dt>
-            <dd>こんなことをしています</dd>
+              <dt>2019.12.20</dt>
+              <dd>こんなことをしています</dd>
 
-            <dt>2019.12.1</dt>
-            <dd>あんなことをしました</dd>
+              <dt>2019.12.1</dt>
+              <dd>あんなことをしました</dd>
+
+              <dt>2026.7.15</dt>
+              <dd>サイト作成</dd>
 
           </dl>
 
@@ -127,9 +127,9 @@
 
         <div class="col-12">
           <ul class="illust-1">
-            <li><a href="./img/01.jpg" data-fimg="illust" data-fcaption="ここに説明" class="fuwaimg"><img src="./img/01-s.jpg"></a></li>
-            <li><a href="./img/02.jpg" data-fimg="illust" data-fcaption="ここに説明" class="fuwaimg"><img src="./img/02-s.jpg"></a></li>
-            <li class="new"><a href="./img/03.jpg" data-fimg="illust" data-fcaption="ここに説明" class="fuwaimg"><img src="./img/03-s.jpg"></a></li>
+            <li><a href="./img/01.jpg" data-fimg="illust" data-fcaption="ここに説明" class="fuwaimg"><img src="./img/01-s.jpg" alt=""></a></li>
+            <li><a href="./img/02.jpg" data-fimg="illust" data-fcaption="ここに説明" class="fuwaimg"><img src="./img/02-s.jpg" alt=""></a></li>
+            <li class="new"><a href="./img/03.jpg" data-fimg="illust" data-fcaption="ここに説明" class="fuwaimg"><img src="./img/03-s.jpg" alt=""></a></li>
           </ul>
 
           <a href="#" class="btn">more</a>
@@ -158,20 +158,21 @@
     </div>
     <div class="rellax deep fix-160" data-rellax-speed="-4">
       <div class="right half">
-        <img src="img/fish.png">
+        <img src="img/fish.png" alt="">
       </div>
       <div class="left half">
-        <img src="img/fish.png">
+        <img src="img/fish.png" alt="">
       </div>
     </div>
   </section>
+
 
   <footer>
     <div class="container">
       <div class="row">
         <div class="col-12 center">
-          <a href="index.html"><span class="sitename">ここにサイト名</span></a>
-          <p>since 2020.</p>
+          <a href="index.html"><span class="sitename">Mira-c4t</span></a>
+          <p>since 2026.</p>
 
           <p>注意書き、SNSボタンなどをここにおいてもOK。</p>
 
@@ -187,6 +188,20 @@
       </div>
     </div>
   </footer>
+    <!--ページの上部に戻る「↑」ボタン-->
+<p class="nav-fix-pos-pagetop"><a href="#"><img src="img/pagetop.png" alt="PAGE TOP"></a></p>
+
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="800" style="display: none;">
+    <defs>
+        <filter id="goo">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="6" result="blur" />
+            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 35 -15" result="goo" />
+            <feComposite in="SourceGraphic" in2="goo" operator="atop" />
+        </filter>
+    </defs>
+</svg>
+
+<div id="cursor" class="Cursor"></div>
 
   <script>
     var rellax = new Rellax(' .rellax ', {
@@ -196,6 +211,9 @@
   </script>
   <script src="js/scrollbooster.min.js" charset="utf-8"></script>
 <script src="js/fuwaimg.js" charset="utf-8"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.1/TweenMax.min.js"></script>
+<script src="js/custom-cursor.js"></script>
+<script src="js/fixmenu_pagetop.js"></script>
 </body>
 
 </html>
