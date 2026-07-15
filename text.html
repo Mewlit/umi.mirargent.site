@@ -1,170 +1,436 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <title>未来の小説</title>
+        <link rel="stylesheet" href="css/bootstrap.css" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/fuwaimg.css" />
+        <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
+        <!-- CreateJSのライブラリー読み込み -->
+        <script src="https://cdn.rawgit.com/ics-creative/ParticleJS/release/1.0.0/libs/particlejs.min.js"></script>
+        <!-- ParticleJSのライブラリー読み込み -->
+        <script src="js/jquery.js"></script>
+        <script src="js/common.js"></script>
+        <script src="js/rellax.js"></script>
+        <link
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+            integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+            crossorigin="anonymous"
+        />
+        <link
+            href="https://fonts.googleapis.com/css?family=Sawarabi+Mincho&display=swap"
+            rel="stylesheet"
+        />
+        <meta property="og:url" content="https://mira-c4t.github.io" />
+        <meta property="og:site_name" content="未来のMir4" />
+        <meta property="og:description" content="いつかみんなに出会うために" />
+    </head>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>深海 - Texts</title>
-  <link rel="stylesheet" href="css/bootstrap.css">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/fuwaimg.css">
-  <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script> <!-- CreateJSのライブラリー読み込み -->
-  <script src="https://cdn.rawgit.com/ics-creative/ParticleJS/release/1.0.0/libs/particlejs.min.js"></script> <!-- ParticleJSのライブラリー読み込み -->
-  <script src="js/jquery.js"></script>
-  <script src="js/common.js"></script>
-  <script src="js/rellax.js"></script>
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
-  <link href="https://fonts.googleapis.com/css?family=Sawarabi+Mincho&display=swap" rel="stylesheet">
-</head>
+    <body id="text">
+        <header>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <ul>
+                            <li><a href="index.html#first">about</a></li>
+                            <li><a href="index.html#me">me</a></li>
+                            <li><a href="index.html#contact">contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
 
-<body id="text">
-  <header>
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <ul>
-            <li><a href="index.html#first">about</a></li>
-            <li><a href="index.html#me">me</a></li>
-            <li><a href="index.html#contact">contact</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </header>
+        <main>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2 class="h2-b">
+                            魔王討伐？それよりエリア確保しろよクソが
+                        </h2>
+                        <p>
+                            <strong>1: 以下、V_LIPがお送りします</strong> <br />
+                            スレ主：<strong style="color: #ff4500"
+                                >【光の救世主】トレーサー (Lv.1)</strong
+                            >
+                            <br /><br />
+                            トラブル発生！なんかよく分からないトラックに轢かれたと思ったら、中世ヨーロッパ風の異世界に転生しちゃった！
+                            <br />
+                            しかも私、ジョブが「俊足の伝書使（ノンバフ）」なんだけど！<br />
+                            攻撃力0なんだけど！どうすればいいのこれ！？<br />
+                        </p>
 
-  <main>
-    <div class="container">
-      <div class="row">
+                        <p>
+                            <strong>2: 以下、V_LIPがお送りします</strong> <br />
+                            【鉄壁のニート】ラインハルト (Lv.1) <br /><br />
+                            わしも転生したぞ！ <br />
+                            だがジョブが「盾（攻撃不可）」だ！<br />
+                            歩くことしかできん！後ろの魔法使いども、早くわしを介護（ヒール）せんか！<br />
+                        </p>
 
-        <div class="col-12">
-          <h2 class="h2-b">やまなし</h2>
-          <p>　蟹の子供らはもうよほど大きくなり、底の景色も夏から秋の間にすっかり変りました。
-            <br>　白い柔やわらかな円石まるいしもころがって来、小さな錐きりの形の水晶すいしょうの粒や、金雲母きんうんものかけらもながれて来てとまりました。
-            <br><br>　そのつめたい水の底まで、ラムネの瓶びんの月光がいっぱいに透すきとおり天井では波が青じろい火を、燃したり消したりしているよう、あたりはしんとして、ただいかにも遠くからというように、その波の音がひびいて来るだけです。
-            <br>　蟹の子供らは、あんまり月が明るく水がきれいなので睡ねむらないで外に出て、しばらくだまって泡をはいて天上の方を見ていました。<br>
-            『やっぱり僕ぼくの泡は大きいね。』<br>
-            『兄さん、わざと大きく吐いてるんだい。僕だってわざとならもっと大きく吐けるよ。』<br>
-            『吐いてごらん。おや、たったそれきりだろう。いいかい、兄さんが吐くから見ておいで。そら、ね、大きいだろう。』<br>
-            『大きかないや、おんなじだい。』<br>
-            『近くだから自分のが大きく見えるんだよ。そんなら一緒に吐いてみよう。いいかい、そら。』<br>
-            『やっぱり僕の方大きいよ。』<br>
-            『本当かい。じゃ、も一つはくよ。』<br>
-            『だめだい、そんなにのびあがっては。』
-            <br>　またお父さんの蟹が出て来ました。
-            『もうねろねろ。遅おそいぞ、あしたイサドへ連れて行かんぞ。』<br>
-            『お父さん、僕たちの泡どっち大きいの』<br>
-            『それは兄さんの方だろう』<br>
-            『そうじゃないよ、僕の方大きいんだよ』弟の蟹は泣きそうになりました。
-            <br>　そのとき、トブン。
-            <br>　黒い円い大きなものが、天井から落ちてずうっとしずんで又上へのぼって行きました。キラキラッと黄金きんのぶちがひかりました。<br>
-            『かわせみだ』子供らの蟹は頸くびをすくめて云いました。
-            <br>　お父さんの蟹は、遠めがねのような両方の眼をあらん限り延ばして、よくよく見てから云いました。<br>
-            『そうじゃない、あれはやまなしだ、流れて行くぞ、ついて行って見よう、ああいい匂においだな』
-            <br>　なるほど、そこらの月あかりの水の中は、やまなしのいい匂いでいっぱいでした。
-            <br>　三疋はぼかぼか流れて行くやまなしのあとを追いました。
-            <br>　その横あるきと、底の黒い三つの影法師かげぼうしが、合せて六つ踊おどるようにして、やまなしの円い影を追いました。
-            <br>　間もなく水はサラサラ鳴り、天井の波はいよいよ青い焔ほのおをあげ、やまなしは横になって木の枝えだにひっかかってとまり、その上には月光の虹にじがもかもか集まりました。<br>
-            『どうだ、やっぱりやまなしだよ、よく熟している、いい匂いだろう。』<br>
-            『おいしそうだね、お父さん』<br>
-            『待て待て、もう二日ばかり待つとね、こいつは下へ沈しずんで来る、それからひとりでにおいしいお酒ができるから、さあ、もう帰って寝ねよう、おいで』
-            <br>　親子の蟹は三疋自分等らの穴に帰って行きます。
-            <br>　波はいよいよ青じろい焔をゆらゆらとあげました、それは又金剛石こんごうせきの粉をはいているようでした。</p>
+                        <p>
+                            <strong>3: 以下、V_LIPがお送りします</strong> <br />
+                            【闇のポエマー】リーパー (Lv.1) <br /><br />
+                            クソが、俺のジョブは「死神（ただの喪服を着た人）」だ。
+                            <br />
+                            二丁拳銃？ そんな近代兵器はこの世界にない。<br />
+                            武器屋の親父に「何だその格好は、厨二病の祭りは昨日終わったぞ」と言われた。<br />
+                            死ね……死ね……（※物理攻撃力がないためただの愚痴）<br />
+                        </p>
 
-          <div class="page">
-            <a href="#" class="next">< next</a>
-            <a href="#" class="next">back</a>
-            <a href="#" class="prev">prev ></a>
-          </div>
+                        <p>
+                            <strong>4: 以下、V_LIPがお送りします</strong> <br />
+                            【壁歩き専門家】ハンゾー (Lv.2) <br /><br />
+                            &gt;&gt;1 <br />
+                            泣くな、小娘。私など初期スキルが「壁を登る」だけだ。<br />
+                            異世界のモンスターは誰も壁の上にいない。みんな地面を歩いている。<br />
+                            私の存在意義とは。<br />
+                        </p>
 
-          <hr>
+                        <p>
+                            <strong>5: 以下、V_LIPがお送りします</strong> <br />
+                            【科学のゴリラ】ウィンストン (Lv.1) <br /><br />
+                            &gt;&gt;4 <br />
+                            私はただの「喋るデカい猿」というモンスター枠に分類され、冒険者ギルドに指名手配されました。<br />
+                            異世界転生モノの倫理観はどうなっているんですか。バナナを要求します。<br />
+                        </p>
 
-          <div class="atogaki">
-            <p>出展：青空文庫<br>
-              著者：宮沢賢治<br>
-              ここにあとがきを書いてもいいですね。</p>
+                        <p>
+                            <strong>15: 以下、V_LIPがお送りします</strong>
+                            <br />
+                            <strong style="color: #ff4500"
+                                >【光の救世主】トレーサー (Lv.1)</strong
+                            >
+                            <br /><br />
+                            ちょっとみんな、雑談してないで集まって！ <br />
+                            ギルドの前にゴブリン（Lv.5）が3匹も来てて、街の人が困ってるの！<br />
+                            誰か前線張って！<br />
+                        </p>
 
-            <blockquote>
-              引用はこのように記述してください。<br>
-              改行もできます。
-            </blockquote>
-          </div> <!-- end atogaki -->
+                        <p>
+                            <strong>16: 以下、V_LIPがお送りします</strong>
+                            <br />
+                            【神に祈るな私に祈れ】マーシー (Lv.1) <br /><br />
+                            &gt;&gt;15 <br />
+                            行くわけないでしょう。私はただの「街の看護師（非戦闘員）」です。<br />
+                            誰が異世界にきてまで、ULTも使えない状態でクソエイム共のケツを追いかけ回さなきゃいけないんですか？<br />
+                            私はギルドの酒場でビール飲んでます。<br />
+                        </p>
 
-          <h2>h2見出し</h2>
-          <h2 class="h2-a">h2-a見出し</h2>
-          <h2 class="h2-b">h2-b見出し</h2>
-          <h2 class="h2-c">h2-b見出し</h2>
+                        <p>
+                            <strong>17: 以下、V_LIPがお送りします</strong>
+                            <br />
+                            【鉄壁のニート】ラインハルト (Lv.1) <br /><br />
+                            &gt;&gt;16 <br />
+                            マーシー！ヒールをくれ！<br />
+                            ゴブリンに盾を叩かれて、わしの精神的耐久値が限界突破しそうだ！<br />
+                        </p>
 
-          <h3>h3見出し</h3>
-          <h3 class="h3-a">h3-a見出し</h3>
-          <h3 class="h3-b">h3-b見出し</h3>
+                        <p>
+                            <strong>18: 以下、V_LIPがお送りします</strong>
+                            <br />
+                            【闇のポエマー】リーパー (Lv.1) <br /><br />
+                            &gt;&gt;17 <br />
+                            ハルト、お前はいつも盾を張るだけで一歩も進まない。<br />
+                            「盾の勇者の成り上がり」にすらなれないただの鉄くずが。<br />
+                        </p>
 
-          <p>文章のみほんです。文章のみほんです。文章のみほんです。文章のみほんです。文章のみほんです。文章のみほんです。文章のみほんです。文章のみほんです。文章のみほんです。文章のみほんです。文章のみほんです。文章のみほんです。文章のみほんです。文章のみほんです。文章のみほんです。文章のみほんです。文章のみほんです。文章のみほんです。文章のみほんです。文章のみほんです。文章のみほんです。文章のみほんです。文章のみほんです。</p>
+                        <p>
+                            <strong>19: 以下、V_LIPがお送りします</strong>
+                            <br />
+                            【メカ無し本体】D.Va (Lv.1) <br /><br />
+                            メカがない。 <br />
+                            マジでただの、ゲーマーの服を着た19歳の女子大生（戦闘力：一般人以下）。<br />
+                            街の果物屋でバイト始めたから、みんなリンゴ買いにきて。<br />
+                            ちなみに給料はウサギのコイン。<br />
+                        </p>
 
-          <ul class="li-a">
-            <li>ulのli-aリスト</li>
-            <li>ulのli-aリスト</li>
-            <li>ulのli-aリスト</li>
-            <li>ulのli-aリスト</li>
-          </ul>
+                        <p>
+                            <strong>20: 以下、V_LIPがお送りします</strong>
+                            <br />
+                            【ただのスケーター】ルシオ (Lv.1) <br /><br />
+                            &gt;&gt;19 <br />
+                            異世界、地面が舗装されてなさすぎてローラーブレードが1ミリも滑らなくて草。<br />
+                            ずっと畑のあぜ道でズッコケてるわ。<br />
+                        </p>
 
-          <ul class="li-b">
-            <li>ulのli-bリスト</li>
-            <li>ulのli-bリスト</li>
-            <li>ulのli-bリスト</li>
-            <li>ulのli-bリスト</li>
-          </ul>
+                        <p>
+                            <strong>50: 以下、V_LIPがお送りします</strong>
+                            <br />
+                            <strong style="color: #ff4500"
+                                >【光の救世主】トレーサー (Lv.1)</strong
+                            >
+                            <br /><br />
+                            大 変 ！！！ <br />
+                            ゴブリンの後ろから、めっちゃデカい「魔王軍の幹部（Lv.50）」が出てきたんだけど！！<br />
+                            誰か！誰かULT（アルティメット）溜まってる人いないの！？<br />
+                        </p>
 
-          <ol class="li-a">
-            <li>olのli-aリスト</li>
-            <li>olのli-aリスト</li>
-            <li>olのli-aリスト</li>
-            <li>olのli-aリスト</li>
-          </ol>
+                        <p>
+                            <strong>51: 以下、V_LIPがお送りします</strong>
+                            <br />
+                            【闇のポエマー】リーパー (Lv.1) <br /><br />
+                            &gt;&gt;50 <br />
+                            溜まるわけないだろ、まだ誰も1ダメージも与えてない。<br />
+                        </p>
 
-          <ol class="li-b">
-            <li>olのli-bリスト</li>
-            <li>olのli-bリスト</li>
-            <li>olのli-bリスト</li>
-            <li>olのli-bリスト</li>
-          </ol>
-        </div> <!-- end col-12 -->
+                        <p>
+                            <strong>52: 以下、V_LIPがお送りします</strong>
+                            <br />
+                            【壁歩き専門家】ハンゾー (Lv.2) <br /><br />
+                            &gt;&gt;50 <br />
+                            待て、我が竜が……いや、出ない。<br />
+                            矢を1本放ってみたが、風で流されて隣の民家の鶏に刺さった。<br />
+                            鶏が怒って私を追いかけてくる。助けてくれ。<br />
+                        </p>
 
-      </div> <!-- end row -->
+                        <p>
+                            <strong>53: 以下、V_LIPがお送りします</strong>
+                            <br />
+                            【科学のゴリラ】ウィンストン (Lv.1) <br /><br />
+                            &gt;&gt;52 <br />
+                            だから豚（ロードホッグ）をタンクに選ぶからこうなるんですよ。<br />
+                            ところで彼はどこにいるんですか？<br />
+                        </p>
 
-    </div> <!-- end container -->
-  </main>
+                        <p>
+                            <strong>54: 以下、V_LIPがお送りします</strong>
+                            <br />
+                            【フックが本体】ロードホッグ (Lv.1) <br /><br />
+                            宿屋の裏で、タダ飯を食おうとして憲兵に捕まった。
+                            <br />
+                            鎖で繋がれてる。フックが逆。<br />
+                        </p>
 
+                        <p>
+                            <strong>100: 以下、V_LIPがお送りします</strong>
+                            <br />
+                            【魔王（自称）】ドゥームフィスト (Lv.99)
+                            <br /><br />
+                            クソスレ見つけて草。 <br />
+                            お前ら、何が転生だ。<br /><br />
+                            私は魔王城の玉座に最初からLv.99でスポーンしたぞ。<br />
+                            右ストレート一発でこの世界のドラゴンが消し飛んだ。<br />
+                            これが「真のOW」だ。ゴミ共、さっさと平伏せ。<br />
+                        </p>
 
-  <footer>
-    <div class="container">
-      <div class="row">
-        <div class="col-12 center">
-          <a href="index.html"><span class="sitename">ここにサイト名</span></a>
-          <p>since 2020.</p>
+                        <p>
+                            <strong>101: 以下、V_LIPがお送りします</strong>
+                            <br />
+                            <strong style="color: #ff4500"
+                                >【光の救世主】トレーサー (Lv.1)</strong
+                            >
+                            <br /><br />
+                            &gt;&gt;100 <br />
+                            は？？？？？<br />
+                            なんでドゥームだけそんな勝ち組なの！？<br />
+                            ずるい！ナーフしろ！今すぐナーフしろ！！！<br />
+                        </p>
 
-          <p>注意書き、SNSボタンなどをここにおいてもOK。</p>
+                        <p>
+                            <strong>102: 以下、V_LIPがお送りします</strong>
+                            <br />
+                            【神に祈るな私に祈れ】マーシー (Lv.1) <br /><br />
+                            &gt;&gt;100 <br />
+                            まあ、どうせ魔王になっても、誰もヒールしてくれないからそのうち孤独死するんでしょうね。<br />
+                            スキル「セルフケア」もないくせにイキらないでください。<br />
+                        </p>
 
-          <ul class="sns-list">
-            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-            <li><a href="#"><i class="fab fa-tumblr"></i></a></li>
-            <li><a href="#"><i class="fas fa-envelope"></i></a></li>
-          </ul>
+                        <p>
+                            <strong>103: 以下、V_LIPがお送りします</strong>
+                            <br />
+                            【魔王（自称）】ドゥームフィスト (Lv.99)
+                            <br /><br />
+                            &gt;&gt;102 <br />
+                            おい、やめろ。<br />
+                            魔王城に一人でいるの、マジで寂しいんだ。<br />
+                            誰も話しかけてこないし、四天王とかいうやつらは全員AI（人工知能）みたいにつまらん定型文しか喋らん。<br />
+                            お前ら、早く魔王城まで攻めてきてくれ。暇すぎて城の壁にロケットパンチしてたら、城が半壊した。<br />
+                        </p>
 
-          <p class="bottom"><a href="https://do.gt-gt.org" target="_blank">template by do.</a></p>
-        </div>
-      </div>
-    </div>
-  </footer>
+                        <p>
+                            <strong>104: 以下、V_LIPがお送りします</strong>
+                            <br />
+                            【闇のポエマー】リーパー (Lv.1) <br /><br />
+                            &gt;&gt;103 <br />
+                            誰が行くか。<br />
+                            こっちは今、ギルドの掲示板で「薬草採取（報酬：パンの耳）」のクエストを競り合ってるんだ。<br /><br />
+                            あ、ハルトが薬草と間違えて毒キノコ食って毒状態（デス）になった。<br />
+                        </p>
 
-  <script>
-    var rellax = new Rellax(' .rellax ', {
-      // 中央寄せ
-      center: true
-    });
-  </script>
-  <script src="js/scrollbooster.min.js" charset="utf-8"></script>
-<script src="js/fuwaimg.js" charset="utf-8"></script>
-</body>
+                        <p>
+                            <strong>105: 以下、V_LIPがお送りします</strong>
+                            <br />
+                            【鉄壁のニート】ラインハルト (Lv.1)
+                            ※ステータス：死亡 <br /><br />
+                            <strong
+                                >「我が盾は、毒（物理）を防げんかった……！！！」</strong
+                            ><br />
+                        </p>
 
+                        <p>
+                            <strong>106: 以下、V_LIPがお送りします</strong>
+                            <br />
+                            <strong style="color: #ff4500"
+                                >【光の救世主】トレーサー (Lv.1)</strong
+                            >
+                            <br /><br />
+                            ＿人人人人人人人人＿ <br />
+                            ＞ 味 方 割 れ ＜<br />
+                            ￣Y^Y^Y^Y^Y^Y^Y^Y^￣<br /><br />
+                            もうダメだこのゲーム（世界）、降伏（サレンダー）投票どこ？<br />
+                        </p>
+
+                        <div class="page">
+                            <a href="#" class="next">< next</a>
+                            <a href="#" class="next">back</a>
+                            <a href="#" class="prev">prev ></a>
+                        </div>
+
+                        <hr />
+
+                        <div class="atogaki">
+                            <p>
+                                出展：青空文庫<br />
+                                著者：宮沢賢治<br />
+                                ここにあとがきを書いてもいいですね。
+                            </p>
+
+                            <blockquote>
+                                引用はこのように記述してください。<br />
+                                改行もできます。
+                            </blockquote>
+                        </div>
+                        <!-- end atogaki -->
+
+                        <h2>h2見出し</h2>
+                        <h2 class="h2-a">h2-a見出し</h2>
+                        <h2 class="h2-b">h2-b見出し</h2>
+                        <h2 class="h2-c">h2-b見出し</h2>
+
+                        <h3>h3見出し</h3>
+                        <h3 class="h3-a">h3-a見出し</h3>
+                        <h3 class="h3-b">h3-b見出し</h3>
+
+                        <p>
+                            文章のみほんです。文章のみほんです。文章のみほんです。文章のみほんです。文章のみほんです。文章のみほんです。文章のみほんです。文章のみほんです。文章のみほんです。文章のみほんです。文章のみほんです。文章のみほんです。文章のみほんです。文章のみほんです。文章のみほんです。文章のみほんです。文章のみほんです。文章のみほんです。文章のみほんです。文章のみほんです。文章のみほんです。文章のみほんです。文章のみほんです。
+                        </p>
+
+                        <ul class="li-a">
+                            <li>ulのli-aリスト</li>
+                            <li>ulのli-aリスト</li>
+                            <li>ulのli-aリスト</li>
+                            <li>ulのli-aリスト</li>
+                        </ul>
+
+                        <ul class="li-b">
+                            <li>ulのli-bリスト</li>
+                            <li>ulのli-bリスト</li>
+                            <li>ulのli-bリスト</li>
+                            <li>ulのli-bリスト</li>
+                        </ul>
+
+                        <ol class="li-a">
+                            <li>olのli-aリスト</li>
+                            <li>olのli-aリスト</li>
+                            <li>olのli-aリスト</li>
+                            <li>olのli-aリスト</li>
+                        </ol>
+
+                        <ol class="li-b">
+                            <li>olのli-bリスト</li>
+                            <li>olのli-bリスト</li>
+                            <li>olのli-bリスト</li>
+                            <li>olのli-bリスト</li>
+                        </ol>
+                    </div>
+                    <!-- end col-12 -->
+                </div>
+                <!-- end row -->
+            </div>
+            <!-- end container -->
+        </main>
+
+        <!--ページの上部に戻る「↑」ボタン-->
+        <p class="nav-fix-pos-pagetop">
+            <a href="#"><img src="img/pagetop.png" alt="PAGE TOP" /></a>
+        </p>
+
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 center">
+                        <a href="index.html"
+                            ><span class="sitename">ここにサイト名</span></a
+                        >
+                        <p>since 2020.</p>
+
+                        <p>注意書き、SNSボタンなどをここにおいてもOK。</p>
+
+                        <ul class="sns-list">
+                            <li>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fab fa-tumblr"></i></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fas fa-envelope"></i></a>
+                            </li>
+                        </ul>
+
+                        <p class="bottom">
+                            <a href="https://do.gt-gt.org" target="_blank"
+                                >template by do.</a
+                            >
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            version="1.1"
+            width="800"
+            style="display: none"
+        >
+            <defs>
+                <filter id="goo">
+                    <feGaussianBlur
+                        in="SourceGraphic"
+                        stdDeviation="6"
+                        result="blur"
+                    />
+                    <feColorMatrix
+                        in="blur"
+                        mode="matrix"
+                        values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 35 -15"
+                        result="goo"
+                    />
+                    <feComposite in="SourceGraphic" in2="goo" operator="atop" />
+                </filter>
+            </defs>
+        </svg>
+
+        <div id="cursor" class="Cursor"></div>
+
+        <script>
+            var rellax = new Rellax(" .rellax ", {
+                // 中央寄せ
+                center: true,
+            });
+        </script>
+        <script src="js/scrollbooster.min.js" charset="utf-8"></script>
+        <script src="js/fuwaimg.js" charset="utf-8"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.1/TweenMax.min.js"></script>
+        <script src="js/custom-cursor.js"></script>
+        <script src="js/fixmenu_pagetop.js"></script>
+    </body>
 </html>
