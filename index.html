@@ -1,224 +1,319 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <title>未来のMir4</title>
+        <link rel="stylesheet" href="css/bootstrap.css" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/fuwaimg.css" />
+        <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
+        <!-- CreateJSのライブラリー読み込み -->
+        <script src="https://cdn.rawgit.com/ics-creative/ParticleJS/release/1.0.0/libs/particlejs.min.js"></script>
+        <!-- ParticleJSのライブラリー読み込み -->
+        <script src="js/jquery.js"></script>
+        <script src="js/common.js"></script>
+        <script src="js/rellax.js"></script>
+        <link
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+            integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+            crossorigin="anonymous"
+        />
+        <link
+            href="https://fonts.googleapis.com/css?family=Sawarabi+Mincho&display=swap"
+            rel="stylesheet"
+        />
+        <meta property="og:url" content="https://mira-c4t.github.io" />
+        <meta property="og:site_name" content="未来のMir4" />
+        <meta property="og:description" content="いつかみんなに出会うために" />
+    </head>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>未来のMir4</title>
-  <link rel="stylesheet" href="css/bootstrap.css">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/fuwaimg.css">
-  <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script> <!-- CreateJSのライブラリー読み込み -->
-  <script src="https://cdn.rawgit.com/ics-creative/ParticleJS/release/1.0.0/libs/particlejs.min.js"></script> <!-- ParticleJSのライブラリー読み込み -->
-  <script src="js/jquery.js"></script>
-  <script src="js/common.js"></script>
-  <script src="js/rellax.js"></script>
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
-  <link href="https://fonts.googleapis.com/css?family=Sawarabi+Mincho&display=swap" rel="stylesheet">
-  <meta property="og:url" content="https://mira-c4t.github.io">
-  <meta property="og:site_name" content="未来のMir4">
-  <meta property="og:description" content="いつかみんなに出会うために">
-</head>
+    <body>
+        <header>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <ul>
+                            <li><a href="#first">about</a></li>
+                            <li><a href="#me">me</a></li>
+                            <li><a href="#contact">contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
 
-<body>
-  <header>
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <ul>
-            <li><a href="#first">about</a></li>
-            <li><a href="#me">me</a></li>
-            <li><a href="#contact">contact</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </header>
+        <section id="top">
+            <!-- id="top"は変えないでください！デザインが崩れます -->
+            <div class="rellax base">
+                <div class="title">
+                    <h1>深海</h1>
+                    <p>沈んでいくんじゃない。静かに、浮かんでいるんだ。</p>
+                </div>
+            </div>
+            <div class="rellax front center" data-rellax-speed="6">
+                <canvas width="1400" height="800" id="myCanvas"></canvas>
+            </div>
+            <div class="rellax back" data-rellax-speed="4">
+                <div class="center full">
+                    <img src="img/top.png" alt="" />
+                </div>
+            </div>
+            <div class="rellax deep fix-80 only-pc" data-rellax-speed="-2">
+                <div class="right half">
+                    <img src="img/fish.png" alt="" />
+                </div>
+                <div class="left half">
+                    <img src="img/fish.png" alt="" />
+                </div>
+            </div>
+        </section>
 
-  <section id="top"> <!-- id="top"は変えないでください！デザインが崩れます -->
-    <div class="rellax base">
-      <div class="title">
-        <h1>深海</h1>
-        <p>沈んでいくんじゃない。静かに、浮かんでいるんだ。</p>
-      </div>
-    </div>
-    <div class="rellax front center" data-rellax-speed="6">
-      <canvas width="1400" height="800" id="myCanvas"></canvas>
-    </div>
-    <div class="rellax back" data-rellax-speed="4">
-      <div class="center full">
-        <img src="img/top.png" alt="">
-      </div>
-    </div>
-    <div class="rellax deep fix-80 only-pc" data-rellax-speed="-2">
-      <div class="right half">
-        <img src="img/fish.png" alt="">
-      </div>
-      <div class="left half">
-        <img src="img/fish.png" alt="">
-      </div>
-    </div>
-  </section>
+        <section id="first">
+            <!-- id="first"は変えないでください！デザインが崩れます -->
 
-<section id="first"> <!-- id="first"は変えないでください！デザインが崩れます -->
+            <a href="#first"><i class="fas fa-angle-down"></i></a>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12" class="center">
+                        <h2 class="center">海の底のセーブデータ</h2>
+                        <p class="center">
+                            ここはネットの波間にひっそりと沈む、<br />
+                            だれにも邪魔されないプライベートな深海。<br />
+                            スクロールの視差効果が、<br />
+                            あなたを静かな水底へと優しく誘います。
+                        </p>
+                        <p class="center">
+                            深く潜るにつれて、ゆっくりと移り変わる青。<br />
+                            日常のノイズが、すうっと遠ざかっていく。<br />
+                            イラストや言葉、ゲームの記憶を並べた、<br />
+                            小さな水槽のようなポートフォリオです。
+                        </p>
+                        <p class="center">
+                            無駄なものは削ぎ落とし、<br />
+                            コードの光だけでこの静寂を描き出しました。<br />
+                            お気に入りの音楽でも聴きながら、ゆっくりと沈んでいってください。
+                        </p>
 
-    <a href="#first"><i class="fas fa-angle-down"></i></a>
-    <div class="container">
-      <div class="row">
-        <div class="col-12" class="center">
-            <h2 class="center">海の底のセーブデータ</h2>
-            <p class="center">ここはネットの波間にひっそりと沈む、<br>
-                だれにも邪魔されないプライベートな深海。<br>
-                スクロールの視差効果が、<br>
-                あなたを静かな水底へと優しく誘います。</p>
-            <p class="center">深く潜るにつれて、ゆっくりと移り変わる青。<br>
-                日常のノイズが、すうっと遠ざかっていく。<br>
-                イラストや言葉、ゲームの記憶を並べた、<br>
-                小さな水槽のようなポートフォリオです。</p>
-            <p class="center">無駄なものは削ぎ落とし、<br>
-                コードの光だけでこの静寂を描き出しました。<br>
-                お気に入りの音楽でも聴きながら、ゆっくりと沈んでいってください。</p>
+                        <ul class="link-2 center">
+                            <li><a href="text.html">文章ページ</a></li>
+                            <li><a href="comic.html">漫画展示ページ</a></li>
+                            <li><a href="books.html">頒布物一覧ページ</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-          <ul class="link-2 center">
-            <li><a href="text.html">文章ページ</a></li>
-            <li><a href="comic.html">漫画展示ページ</a></li>
-            <li><a href="books.html">頒布物一覧ページ</a></li>
-          </ul>
+        <section id="me">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="img/top.png" alt="" />
+                    </div>
 
-        </div>
-      </div>
-    </div>
-  </section>
+                    <div class="col-md-6">
+                        <h3>Mira-C4t</h3>
+                        <p>
+                            a.k.a Mira, Argent, Mewlit<br />
+                            <!--<a href="#">→Pixiv</a> -->
+                        </p>
 
-  <section id="me">
-    <div class="container">
-      <div class="row">
+                        <dl class="flex">
+                            <dt>2026.7.15</dt>
+                            <dd>何もしてない</dd>
 
-        <div class="col-md-6">
-          <img src="img/top.png" alt="">
-        </div>
+                            <dt>2026.7.15</dt>
+                            <dd>何もしてない</dd>
 
-        <div class="col-md-6">
-          <h3>Mira-C4t</h3>
-          <p>a.k.a Mira, Argent<br>
-            <!--<a href="#">→Pixiv</a> --> </p>
+                            <dt>2026.7.15</dt>
+                            <dd>何もしてない</dd>
 
-          <dl class="flex">
+                            <dt>2026.7.15</dt>
+                            <dd>サイト作成</dd>
 
-              <dt>2020.1.8</dt>
-              <dd>イベントに参加しました</dd>
+                            <form id="dream">
+                                <input type="text" name="day1" placeholder="dayday">
+                            </form>
+                        </dl>
 
-              <dt>2019.12.20</dt>
-              <dd>こんなことをしています</dd>
+                        <ul class="sns-list">
+                            <li>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fab fa-tumblr"></i></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fas fa-envelope"></i></a>
+                            </li>
+                        </ul>
+                    </div>
 
-              <dt>2019.12.1</dt>
-              <dd>あんなことをしました</dd>
+                    <div class="col-12">
+                        <ul class="illust-1">
+                            <li>
+                                <a
+                                    href="./img/01.jpg"
+                                    data-fimg="illust"
+                                    data-fcaption="ここに説明"
+                                    class="fuwaimg"
+                                    ><img src="./img/01-s.jpg" alt=""
+                                /></a>
+                            </li>
+                            <li>
+                                <a
+                                    href="./img/02.jpg"
+                                    data-fimg="illust"
+                                    data-fcaption="ここに説明"
+                                    class="fuwaimg"
+                                    ><img src="./img/02-s.jpg" alt=""
+                                /></a>
+                            </li>
+                            <li class="new">
+                                <a
+                                    href="./img/03.jpg"
+                                    data-fimg="illust"
+                                    data-fcaption="ここに説明"
+                                    class="fuwaimg"
+                                    ><img src="./img/03-s.jpg" alt=""
+                                /></a>
+                            </li>
+                        </ul>
 
-              <dt>2026.7.15</dt>
-              <dd>サイト作成</dd>
+                        <a href="#" class="btn">more</a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-          </dl>
+        <!--ページの上部に戻る「↑」ボタン-->
+        <p class="nav-fix-pos-pagetop">
+            <a href="#"><img src="img/pagetop.png" alt="PAGE TOP" /></a>
+        </p>
 
+        <section id="contact">
+            <!-- id="contact"は変えないでください！デザインが崩れます -->
+            <div class="rellax base" data-rellax-speed="0">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12" class="center">
+                            <h2 class="center">コンタクト</h2>
+                            <form
+                                method="post"
+                                action="ここにアクション"
+                                class="mailform"
+                            >
+                                <input
+                                    type="text"
+                                    name="message"
+                                    placeholder="お名前"
+                                    disabled
+                                />
+                                <input
+                                    type="mail"
+                                    name="message"
+                                    placeholder="メールアドレス"
+                                    disabled
+                                />
+                                <textarea
+                                    rows="5"
+                                    name="message"
+                                    placeholder="本文"
+                                    disabled
+                                ></textarea>
+                                <input type="submit" value="Send" disabled />
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="rellax deep fix-160" data-rellax-speed="-4">
+                <div class="right half">
+                    <img src="img/fish.png" alt="" />
+                </div>
+                <div class="left half">
+                    <img src="img/fish.png" alt="" />
+                </div>
+            </div>
+        </section>
 
-          <ul class="sns-list">
-            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-            <li><a href="#"><i class="fab fa-tumblr"></i></a></li>
-            <li><a href="#"><i class="fas fa-envelope"></i></a></li>
-          </ul>
-        </div>
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 center">
+                        <a href="index.html"
+                            ><span class="sitename">Mira-c4t</span></a
+                        >
+                        <p>since 2026.</p>
 
-        <div class="col-12">
-          <ul class="illust-1">
-            <li><a href="./img/01.jpg" data-fimg="illust" data-fcaption="ここに説明" class="fuwaimg"><img src="./img/01-s.jpg" alt=""></a></li>
-            <li><a href="./img/02.jpg" data-fimg="illust" data-fcaption="ここに説明" class="fuwaimg"><img src="./img/02-s.jpg" alt=""></a></li>
-            <li class="new"><a href="./img/03.jpg" data-fimg="illust" data-fcaption="ここに説明" class="fuwaimg"><img src="./img/03-s.jpg" alt=""></a></li>
-          </ul>
+                        <p>注意書き、SNSボタンなどをここにおいてもOK。</p>
 
-          <a href="#" class="btn">more</a>
-        </div>
+                        <ul class="sns-list">
+                            <li>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fab fa-tumblr"></i></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fas fa-envelope"></i></a>
+                            </li>
+                        </ul>
 
-      </div>
-    </div>
-  </section>
+                        <p class="bottom">
+                            <a href="https://do.gt-gt.org" target="_blank"
+                                >template by do.</a
+                            >
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
 
-      <!--ページの上部に戻る「↑」ボタン-->
-<p class="nav-fix-pos-pagetop"><a href="#"><img src="img/pagetop.png" alt="PAGE TOP"></a></p>
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            version="1.1"
+            width="800"
+            style="display: none"
+        >
+            <defs>
+                <filter id="goo">
+                    <feGaussianBlur
+                        in="SourceGraphic"
+                        stdDeviation="6"
+                        result="blur"
+                    />
+                    <feColorMatrix
+                        in="blur"
+                        mode="matrix"
+                        values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 35 -15"
+                        result="goo"
+                    />
+                    <feComposite in="SourceGraphic" in2="goo" operator="atop" />
+                </filter>
+            </defs>
+        </svg>
 
-  <section id="contact"> <!-- id="contact"は変えないでください！デザインが崩れます -->
-    <div class="rellax base" data-rellax-speed="0">
-      <div class="container">
-        <div class="row">
-          <div class="col-12" class="center">
-            <h2 class="center">コンタクト</h2>
-            <form method="post" action="ここにアクション" class="mailform">
-              <input type="text" name="message" placeholder="お名前">
-              <input type="mail" name="message" placeholder="メールアドレス">
-              <textarea rows="5" name="message" placeholder="本文"></textarea>
-              <input type="submit" value="Send">
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="rellax deep fix-160" data-rellax-speed="-4">
-      <div class="right half">
-        <img src="img/fish.png" alt="">
-      </div>
-      <div class="left half">
-        <img src="img/fish.png" alt="">
-      </div>
-    </div>
-  </section>
+        <div id="cursor" class="Cursor"></div>
 
-
-
-  <footer>
-    <div class="container">
-      <div class="row">
-        <div class="col-12 center">
-          <a href="index.html"><span class="sitename">Mira-c4t</span></a>
-          <p>since 2026.</p>
-
-          <p>注意書き、SNSボタンなどをここにおいてもOK。</p>
-
-          <ul class="sns-list">
-            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-            <li><a href="#"><i class="fab fa-tumblr"></i></a></li>
-            <li><a href="#"><i class="fas fa-envelope"></i></a></li>
-          </ul>
-
-          <p class="bottom"><a href="https://do.gt-gt.org" target="_blank">template by do.</a></p>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="800" style="display: none;">
-    <defs>
-        <filter id="goo">
-            <feGaussianBlur in="SourceGraphic" stdDeviation="6" result="blur" />
-            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 35 -15" result="goo" />
-            <feComposite in="SourceGraphic" in2="goo" operator="atop" />
-        </filter>
-    </defs>
-</svg>
-
-<div id="cursor" class="Cursor"></div>
-
-  <script>
-    var rellax = new Rellax(' .rellax ', {
-      // 中央寄せ
-      center: true
-    });
-  </script>
-  <script src="js/scrollbooster.min.js" charset="utf-8"></script>
-<script src="js/fuwaimg.js" charset="utf-8"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.1/TweenMax.min.js"></script>
-<script src="js/custom-cursor.js"></script>
-<script src="js/fixmenu_pagetop.js"></script>
-</body>
-
+        <script>
+            var rellax = new Rellax(" .rellax ", {
+                // 中央寄せ
+                center: true,
+            });
+        </script>
+        <script src="js/scrollbooster.min.js" charset="utf-8"></script>
+        <script src="js/fuwaimg.js" charset="utf-8"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.1/TweenMax.min.js"></script>
+        <script src="js/custom-cursor.js"></script>
+        <script src="js/fixmenu_pagetop.js"></script>
+    </body>
 </html>
