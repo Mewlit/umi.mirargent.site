@@ -97,22 +97,22 @@ input {
   変えないほうが無難ですが、編集するときは漏れのないよう気を付けてください
    ========================================== */
 body {
-  background: #c4dbe0;
+  background: #313536;
   font-family: YuGothic,'Yu Gothic','TsukuBRdGothic-Regular','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3','Cambria Math','Avenir',sans-serif;
   padding: 0;
   margin: 0;
-  color: #7a8588;
+  color: #c0cccf;
 }
 
 body#text {
   background: #3cb0e6;
   background: -webkit-gradient(linear, left top, left bottom, from(#577d85), to(#57585c));
-  background: linear-gradient(to bottom, #c4dbe0 0%, #7ec7d8 100%);
+  background: linear-gradient(to bottom, #577d85 0%, #57585c 100%);
   background-attachment: fixed;
 }
 
 body#text main .container {
-  background: snow;
+  background: #313536;
   padding: 30px;
   margin-top: 100px;
 }
@@ -141,7 +141,7 @@ dl dt {
 
 a {
   text-decoration: none;
-  color: black;
+  color: snow;
   -webkit-transition: 0.7s;
   transition: 0.7s;
 }
@@ -245,7 +245,7 @@ h3 {
   font-size: 130%;
   display: block;
   margin: 20px auto;
-  color: black;
+  color: snow;
 }
 
 @media screen and (max-width: 767px) {
@@ -281,7 +281,7 @@ header ul {
 header ul li a {
   display: block;
   padding: 20px;
-  color: snow;
+  color: #c0cccf;
   text-shadow: 0 1px 10px #313536;
 }
 
@@ -317,7 +317,7 @@ section#top {
 }
 
 section#first {
-  background: #c4dbe0;
+  background: #313536;
   overflow: visible;
 }
 
@@ -940,9 +940,7 @@ h2.h2-a {
   color: snow;
 }
 
-
 h2.h2-b {
-  color: black;
   padding: 10px 20px;
   background: transparent;
   text-align: center;
